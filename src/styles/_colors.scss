@@ -16,3 +16,16 @@ $orange-1: #f55f44;
 $purple-1: #5718ff;
 
 $pink-1: #df18ff;
+
+// Function to set the opacity of colors
+@function opacity($color, $opacity) {
+  @return rgba($color, $opacity);
+}
+
+@mixin tealText() {
+  font-size: 0.75rem;
+  color: $teal-1;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
