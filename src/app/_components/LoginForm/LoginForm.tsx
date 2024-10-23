@@ -26,9 +26,11 @@ export default function LoginForm() {
         className={authStyles.authFormBodyInput}
         type="email"
         name="email"
+        required
         placeholder="Email"
       />
       <PasswordInput
+        required
         className={authStyles.authFormBodyInput}
         name="password"
         placeholder="Password"
