@@ -1,0 +1,107 @@
+@use './colors.scss' as *;
+
+.auth {
+  position: relative;
+  display: grid;
+  background: white;
+  grid-template-columns: 51.11% 48.89%;
+  height: max(100vh, 600px);
+  overflow: hidden;
+
+  &Nav {
+    display: flex;
+    top: 40px;
+    left: 40px;
+    z-index: 10;
+    position: absolute;
+  }
+  &Illustration {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 40px;
+
+    &Image {
+      position: relative;
+      width: 100%;
+      height: fit-content;
+      aspect-ratio: 1.78/1;
+    }
+  }
+
+  &Form {
+    padding: 60px;
+    padding: 40px 100px;
+    box-shadow: 0px 15px 90px 0px #00000008;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    font-family: var(--font-avenirNext);
+
+    &Heading {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &Title {
+        font-weight: 700;
+        font-size: 2.5rem;
+        color: $blue-2;
+        letter-spacing: -0.04em;
+      }
+
+      &SubTitle {
+        font-size: 1.25rem;
+      }
+    }
+
+    &Body {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      width: min(100%, 447px);
+      &Feedback {
+        padding: 17px 16px;
+        width: 100%;
+        color: $red-1;
+        border-radius: 5px;
+
+        background-color: opacity($red-1, 0.1);
+      }
+      &Input {
+        border: 2px solid opacity($blue-1, 0.15);
+        border-radius: 5px;
+        padding: 17px 16px;
+      }
+
+      &Link {
+        width: fit-content;
+        @include tealText;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .auth {
+    grid-template-columns: 100%;
+
+    &Nav {
+      left: 100px;
+    }
+    &Illustration {
+      display: none;
+    }
+
+    &Form {
+      box-shadow: none;
+      &Body {
+        width: 100%;
+      }
+    }
+  }
+}
