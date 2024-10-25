@@ -1,0 +1,82 @@
+.header {
+  width: 100%;
+  box-shadow: 3px 0px 20px 0px #0000000a;
+  background-color: white;
+  display: flex;
+  padding: 20px 30px;
+  gap: 60px;
+  align-items: center;
+  z-index: 15;
+
+  &LogoArea {
+    width: 253px;
+  }
+
+  &Nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+
+    &Left {
+      display: flex;
+      gap: 16px;
+      flex-grow: 1;
+
+      &Toggle {
+        display: none !important;
+      }
+
+      &Input {
+        width: min(100%, 400px);
+      }
+    }
+
+    &Right {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      &Details {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        &Img {
+          border-radius: 100%;
+        }
+
+        &Dropdown {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.link {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    &LogoArea {
+      display: none;
+    }
+
+    &Nav {
+      &Left {
+        &Toggle {
+          display: flex !important;
+        }
+      }
+    }
+  }
+
+  .mobileHidden {
+    display: none;
+  }
+}

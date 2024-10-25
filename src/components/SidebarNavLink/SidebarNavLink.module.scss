@@ -1,0 +1,18 @@
+@use '../../styles/colors' as *;
+
+.button {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 10px 30px;
+  border-radius: 0px;
+  opacity: 0.6;
+}
+
+.fullOpacity {
+  opacity: 100%;
+}
+
+.active {
+  border-left: 3px solid $teal-1;
+  background-color: opacity($teal-1, 0.06);
+}
