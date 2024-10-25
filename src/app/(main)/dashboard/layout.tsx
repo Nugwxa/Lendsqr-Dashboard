@@ -16,7 +16,7 @@ export default function DashboardLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const [sidebarIsOpen, setSidebarIsOpen] = useState<boolean>(true)
+  const [sidebarIsOpen, setSidebarIsOpen] = useState<boolean>(false)
   return (
     <div className={styles.wrapper}>
       <DashboardHeader
