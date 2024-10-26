@@ -23,6 +23,12 @@ a {
   text-decoration: none;
 }
 
+.dashboardTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $blue-2;
+}
+
 input {
   font-family: inherit;
   border-radius: 8px;
