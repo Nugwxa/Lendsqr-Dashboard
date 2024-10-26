@@ -52,7 +52,7 @@ interface Guarantor {
   relationship: GuarantorRelationship
 }
 
-interface User {
+interface UserDTO {
   id: string
   firstName: string
   lastName: string
