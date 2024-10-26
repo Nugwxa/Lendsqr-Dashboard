@@ -1,0 +1,54 @@
+@use '../../styles/colors' as *;
+
+.statContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 3px 5px 20px 0px #0000000a;
+
+  &Icon {
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 100%;
+    background-color: opacity(gray, 0.1);
+  }
+
+  &Label {
+    text-transform: uppercase;
+    color: $blue-1;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &Value {
+    color: $blue-2;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+}
+
+.pinkIcon {
+  color: $pink-1;
+  background-color: opacity($pink-1, 0.1);
+}
+
+.purpleIcon {
+  color: $purple-1;
+  background-color: opacity($purple-1, 0.1);
+}
+
+.orangeIcon {
+  color: $orange-1;
+  background-color: opacity($orange-1, 0.1);
+}
+
+.redIcon {
+  color: $red-1;
+  background-color: opacity($red-1, 0.1);
+}
