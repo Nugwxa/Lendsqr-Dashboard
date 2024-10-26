@@ -2,7 +2,7 @@ import getStatusAccent from './getStatusAccent'
 
 describe('getStatusAccent', () => {
   it('should return blue for active status', () => {
-    expect(getStatusAccent('active')).toBe('blue')
+    expect(getStatusAccent('active')).toBe('green')
   })
 
   it('should return red for blacklisted status', () => {

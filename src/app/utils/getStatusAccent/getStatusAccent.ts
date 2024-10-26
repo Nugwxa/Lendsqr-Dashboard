@@ -7,7 +7,7 @@
 export default function getStatusAccent(status: UserAccountStatus): string {
   switch (status) {
     case 'active':
-      return 'blue'
+      return 'green'
     case 'blacklisted':
       return 'red'
     case 'inactive':
