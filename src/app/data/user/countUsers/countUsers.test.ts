@@ -35,6 +35,7 @@ describe('countUsers', () => {
   })
 
   it('returns 0 if an invalid filter key is provided', async () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const count = await countUsers('non-existent-filter' as any)
     expect(count).toBe(0)
   })
