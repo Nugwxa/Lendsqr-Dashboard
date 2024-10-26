@@ -65,6 +65,7 @@ interface UserDTO {
   hasChildren: boolean
   username: string
   phoneNumber: string
+  organisation: string
   registrationDate: Date
   educationLevel: UserEducationLevel
   employmentStatus: UserEmploymentStatus
