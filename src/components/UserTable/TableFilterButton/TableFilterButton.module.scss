@@ -30,7 +30,6 @@
     width: 100%;
     display: flex;
     align-items: center;
-    // background-color: red;
     position: relative;
 
     input {
@@ -50,29 +49,6 @@
       width: 100%;
       padding-right: 20px;
     }
-
-    // &DateInput {
-    //   appearance: none;
-    //   -moz-appearance: none;
-    //   /* for Chrome */
-    //   -webkit-appearance: none;
-
-    //   &::before {
-    //     content: attr(data-placeholder);
-    //     position: absolute;
-    //     left: 12px;
-    //     top: 50%;
-    //     transform: translateY(-50%);
-    //     color: #999;
-    //     pointer-events: none;
-    //     font-size: 16px;
-    //   }
-
-    //   // Hide placeholder when input is filled
-    //   &:not(:placeholder-shown) + &::before {
-    //     display: none;
-    //   }
-    // }
 
     &Icon {
       position: absolute;
