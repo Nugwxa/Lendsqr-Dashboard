@@ -1,20 +1,36 @@
 import {
   CoinDocumentIcon,
+  Coins2Icon,
   Users3Icon,
   Users4Icon,
 } from '@/components/Icons/General'
-import { CoinsIcon } from '@/components/Icons/Sidebar'
 import { countUsers } from '@/app/data/user'
 import { formatNumberWithCommas } from '@/app/utils'
 import styles from './page.module.scss'
 import type { Metadata } from 'next'
 import UserStatContainer from '@/components/UserStatContainer'
+import UserTable from '@/components/UserTable'
 
 export const metadata: Metadata = {
   title: 'Users | Lendsqr Test - OJ Abba',
 }
 
-export default async function Home() {
+type SearchParam = {
+  query?: string
+  page?: string
+  perPage?: string
+}
+
+interface UsersPageProps {
+  searchParams: SearchParam
+}
+
+export default async function UserPage(props: Readonly<UsersPageProps>) {
+  const searchParams = await props.searchParams
+
+  const page = parseInt(searchParams.page ?? '1', 10) || 1
+  const perPage = parseInt(searchParams.perPage ?? '10', 10) || 10
+
   const userCount = await countUsers()
   const activeUserCount = await countUsers('active-users')
   const usersWithLoansCount = await countUsers('users-with-loans')
@@ -45,13 +61,13 @@ export default async function Home() {
           <UserStatContainer
             color="red"
             label="users with savings"
-            icon={<CoinsIcon />}
+            icon={<Coins2Icon />}
             value={formatNumberWithCommas(usersWithSavingsCount)}
           />
         </div>
       </section>
 
-      <section>Table Here</section>
+      <UserTable page={page} perPage={perPage} totalUsers={userCount} />
     </>
   )
 }
