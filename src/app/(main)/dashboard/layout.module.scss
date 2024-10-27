@@ -7,13 +7,15 @@
 .container {
   position: relative;
   display: flex;
-  gap: 60px;
+  gap: 35px;
   overflow: hidden;
   flex-grow: 1;
 }
 .content {
   padding: 70px 30px;
-
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
   flex-grow: 1;
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */

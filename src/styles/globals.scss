@@ -23,7 +23,14 @@ a {
   text-decoration: none;
 }
 
-input {
+.dashboardTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $blue-2;
+}
+
+input,
+select {
   font-family: inherit;
   border-radius: 8px;
   padding: 12px 20px;
@@ -45,4 +52,22 @@ input {
     border-color: transparent;
     outline: 1.5px solid opacity($blue-2, 0.5);
   }
+}
+
+option {
+  color: $blue-1;
+  opacity: 70%;
+}
+
+select {
+  appearance: none;
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+/* For IE10 */
+select::-ms-expand {
+  display: none;
 }

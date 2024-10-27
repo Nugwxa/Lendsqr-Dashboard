@@ -1,0 +1,27 @@
+@use '../../styles/colors' as *;
+
+.badge {
+  width: fit-content;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: opacity($blue-1, 0.09);
+  color: $blue-1;
+  border-radius: 40px;
+  font-size: 14px;
+}
+
+.redAccent {
+  background-color: opacity($red-1, 0.09);
+  color: $red-1;
+}
+
+.yellowAccent {
+  background-color: opacity($yellow-1, 0.09);
+  color: $yellow-1;
+}
+
+.greenAccent {
+  background-color: opacity($green-1, 0.09);
+  color: $green-1;
+}

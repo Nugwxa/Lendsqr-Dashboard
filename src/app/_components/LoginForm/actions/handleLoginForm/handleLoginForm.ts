@@ -11,13 +11,14 @@ import { redirect } from 'next/navigation'
  * the success of the action and a message.
  */
 export default async function handleLoginForm(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   prevState: any,
   formData: FormData
 ): Promise<ActionResponse> {
   const email = formData.get('email')?.toString()
   const password = formData.get('password')?.toString()
 
-  let success = false
+  const success = false
 
   if (!email || !password)
     return {

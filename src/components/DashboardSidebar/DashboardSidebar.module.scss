@@ -2,6 +2,7 @@
 
 .sidebar {
   width: 280px;
+  flex-shrink: 0;
   background-color: white;
   overflow-y: auto;
   margin: 0;
@@ -54,7 +55,6 @@
   .sidebar {
     position: absolute;
     height: 100%;
-    // transform: c;
     transform: translatex(-283px);
     transition: 0.3s ease-in-out;
   }

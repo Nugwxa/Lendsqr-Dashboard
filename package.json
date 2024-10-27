@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-popover": "^1.1.2",
     "classnames": "^2.5.1",
     "lendsqr-fe-test": "file:",
     "next": "15.0.0",

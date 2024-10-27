@@ -1,0 +1,64 @@
+.headingToggle {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.popover {
+  width: 270px;
+  padding: 20px;
+
+  label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  &Container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    input {
+      width: 100%;
+      padding-right: 20px;
+
+      &[type='date'] {
+        &::-webkit-inner-spin-button,
+        &::-webkit-calendar-picker-indicator {
+          display: none;
+          -webkit-appearance: none;
+        }
+      }
+    }
+
+    select {
+      width: 100%;
+      padding-right: 20px;
+    }
+
+    &Icon {
+      position: absolute;
+      right: 16;
+    }
+  }
+}
+
+.actionButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}

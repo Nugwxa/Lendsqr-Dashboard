@@ -1,0 +1,40 @@
+@use '../../styles/colors' as *;
+
+.pageLimit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 14px;
+
+  &Selector {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    select {
+      padding: 8px 16px;
+      padding-right: 50px;
+      color: $blue-2;
+      font-weight: 500;
+      font-size: 14px;
+      border: none;
+      background-color: opacity($blue-2, 0.1);
+
+      &::placeholder,
+      &:hover {
+        border: none;
+      }
+
+      &:focus {
+        outline: 1.5px solid opacity($blue-2, 0.5);
+      }
+    }
+
+    &Icon {
+      position: absolute;
+      right: 16px;
+      opacity: 0.6;
+    }
+  }
+}
