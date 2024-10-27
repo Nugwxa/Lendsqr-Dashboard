@@ -63,7 +63,7 @@ export default function PageLimitControl(
         </select>
         <ChevronDownIcon className={styles.pageLimitSelectorIcon} />
       </div>
-      of {totalCount}
+      out of {totalCount}
     </div>
   )
 }
