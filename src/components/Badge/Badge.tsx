@@ -21,7 +21,10 @@ export default function Badge(props: Readonly<BadgeProps>): JSX.Element {
   // Dynamically generate the accent class based on the `color` prop
   const accentClass = styles[`${color}Accent`]
   return (
-    <span className={classNames(className, styles.badge, accentClass)}>
+    <span
+      className={classNames(className, styles.badge, accentClass)}
+      {...rest}
+    >
       {children}
     </span>
   )

@@ -38,7 +38,7 @@ export default function Pagination(props: Readonly<PaginationProps>) {
 
     // Set the current page, ensuring it's at least 1
     setCurrentPage(page > 0 ? page : 1)
-  }, [router, searchParams])
+  }, [router, currentPage, searchParams])
 
   /**
    * Handles the click event for page buttons.

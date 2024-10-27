@@ -20,16 +20,17 @@ type SearchParam = {
   page?: string
   perPage?: string
 }
-
+// eslint-disable-next-line
 interface UsersPageProps {
-  searchParams: SearchParam
+  searchParams: Promise<SearchParam>
 }
 
 export default async function UserPage(props: Readonly<UsersPageProps>) {
-  const searchParams = await props.searchParams
+  const { searchParams } = props
 
-  const page = parseInt(searchParams.page ?? '1', 10) || 1
-  const perPage = parseInt(searchParams.perPage ?? '10', 10) || 10
+  const resolvedSearchParams = await searchParams
+  const page = parseInt(resolvedSearchParams.page ?? '1', 10) || 1
+  const perPage = parseInt(resolvedSearchParams.perPage ?? '10', 10) || 10
 
   const userCount = await countUsers()
   const activeUserCount = await countUsers('active-users')
