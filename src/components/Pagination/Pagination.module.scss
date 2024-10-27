@@ -3,6 +3,7 @@
 .pagination {
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
 
   &NavButton {
     padding: 8px;
