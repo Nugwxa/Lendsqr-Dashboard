@@ -8,7 +8,7 @@
   animation-duration: 400ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, opacity;
-  border: 1px solid opacity($blue-2, 0.14);
+  border: 1px solid opacity($blue-1, 0.14);
   border-radius: 4px;
   &[data-state='open'][data-side='top'] {
     animation-name: slideDownAndFade;
