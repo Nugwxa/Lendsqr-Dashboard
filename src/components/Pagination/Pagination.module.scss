@@ -1,0 +1,31 @@
+@use '../../styles/colors' as *;
+
+.pagination {
+  display: flex;
+  gap: 12px;
+
+  &NavButton {
+    padding: 8px;
+    background-color: opacity($blue-2, 0.1);
+    color: $blue-2;
+  }
+
+  &Button {
+    min-width: 20px;
+    min-height: 20px;
+    display: flex;
+    opacity: 0.6;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+
+    &:disabled {
+      cursor: unset;
+    }
+  }
+}
+
+.active {
+  font-weight: 500;
+  opacity: 1;
+}
