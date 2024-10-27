@@ -1,0 +1,21 @@
+@use '../../../styles/colors' as *;
+
+.popover {
+  width: 200px;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid opacity($blue-1, 0.04);
+
+  * {
+    outline: none;
+  }
+}
+
+.trigger {
+  display: flex;
+  padding: 0px 20px;
+  align-items: center;
+}
