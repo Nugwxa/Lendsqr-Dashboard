@@ -47,7 +47,7 @@ export default function UserSummary(
               User&apos;s Tier
             </div>
 
-            <TierStars level={2} />
+            <TierStars level={user.level} />
           </div>
 
           {/* Display user's bank balance and bank details */}
