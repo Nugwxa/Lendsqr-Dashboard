@@ -1,0 +1,62 @@
+@use '../../../../../../../styles/colors' as *;
+
+.userSummary {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 0px;
+  margin-bottom: -16px;
+
+  &Main {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  &Footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ccd1e1 transparent; /* scroll thumb and track */
+  }
+}
+
+.userDetail {
+  display: flex;
+  gap: 10px;
+  &Item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10 20;
+    gap: 5px;
+
+    &:not(:last-child) {
+      border-right: 1px solid opacity($blue-1, 0.2);
+    }
+  }
+}
+
+.mainText {
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: $blue-2;
+}
+
+.subText {
+  font-size: 0.75rem;
+  max-width: 185px;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.tierStars {
+  color: #e9b200;
+  display: flex;
+}

@@ -6,23 +6,16 @@ import {
   SignOutIcon,
 } from '../Icons/Sidebar'
 import { navLinks } from './data'
+import { useSidebarStore } from '@/stores/useSidebarStore'
 import classNames from 'classnames'
 import SidebarNavLink from '../SidebarNavLink'
 import styles from './DashboardSidebar.module.scss'
 
-interface DashboardSidebarProps {
-  sidebarIsOpen: boolean
-}
-
 /**
  * Renders the dashboard's sidebar with navigation links.
- *
- * @param {boolean} sidebarIsOpen - Indicates if the sidebar is currently open.
  */
-export default function DashboardSidebar(
-  props: Readonly<DashboardSidebarProps>
-) {
-  const { sidebarIsOpen } = props
+export default function DashboardSidebar() {
+  const { sidebarIsOpen } = useSidebarStore()
   return (
     <aside
       className={classNames(styles.sidebar, {

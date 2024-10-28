@@ -1,6 +1,6 @@
 'use client'
 import { BellIcon, DropdownIcon, MenuIcon, Xicon } from '../Icons/General'
-import { Dispatch, SetStateAction } from 'react'
+import { useSidebarStore } from '@/stores/useSidebarStore'
 import Button from '../Button'
 import classNames from 'classnames'
 import Image from 'next/image'
@@ -9,19 +9,11 @@ import Link from 'next/link'
 import SearchInput from '../SearchInput'
 import styles from './DashboardHeader.module.scss'
 
-interface DashboardHeaderProps {
-  sidebarIsOpen: boolean
-  setSidebarIsOpen: Dispatch<SetStateAction<boolean>>
-}
-
 /**
  * Header menu for the dashboard.
- *
- * @param {boolean} sidebarIsOpen - Indicates if the sidebar is currently open.
- * @param {Dispatch<SetStateAction<boolean>>} setSidebarIsOpen - Function to toggle sidebar open/close state.
  */
-export default function DashboardHeader(props: Readonly<DashboardHeaderProps>) {
-  const { sidebarIsOpen, setSidebarIsOpen } = props
+export default function DashboardHeader() {
+  const { sidebarIsOpen, setSidebarIsOpen } = useSidebarStore()
 
   const icon = sidebarIsOpen ? <Xicon /> : <MenuIcon />
   return (

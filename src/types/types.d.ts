@@ -19,7 +19,7 @@ type UserBankAccountDetails = {
 
 type UserAccountStatus = 'inactive' | 'pending' | 'blacklisted' | 'active'
 type UserMaritalStatus = 'Single' | 'Married' | 'Divorced'
-type UserResidenceType = 'flat' | "Parent's Apartment" | 'Owned'
+type UserResidenceType = 'Flat' | "Parent's Apartment" | 'Penthouse'
 type UserEducationLevel = 'B.Sc' | 'Secondary School' | "Master's"
 type UserEmploymentStatus = 'Employed' | 'Unemployed' | 'Self Employed'
 type UserEmploymentSector = 'FinTech' | 'Finance' | 'Music' | 'Agric'
@@ -64,6 +64,8 @@ interface UserDTO {
   gender?: 'male' | 'female'
   hasChildren: boolean
   username: string
+  level: 1 | 2 | 3
+  residence: UserResidenceType
   phoneNumber: string
   organisation: string
   registrationDate: Date

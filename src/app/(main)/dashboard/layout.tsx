@@ -1,6 +1,4 @@
-'use client'
 import '@/styles/globals.scss'
-import { useState } from 'react'
 import DashboardHeader from '@/components/DashboardHeader'
 import DashboardSidebar from '@/components/DashboardSidebar'
 import styles from './layout.module.scss'
@@ -16,16 +14,12 @@ export default function DashboardLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const [sidebarIsOpen, setSidebarIsOpen] = useState<boolean>(false)
   return (
     <div className={styles.wrapper}>
-      <DashboardHeader
-        sidebarIsOpen={sidebarIsOpen}
-        setSidebarIsOpen={setSidebarIsOpen}
-      />
+      <DashboardHeader />
 
       <div className={styles.container}>
-        <DashboardSidebar sidebarIsOpen={sidebarIsOpen} />
+        <DashboardSidebar />
         <div className={styles.content}>{children}</div>
       </div>
     </div>

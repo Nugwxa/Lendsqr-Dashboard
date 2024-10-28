@@ -38,7 +38,7 @@ export default async function UserPage(props: Readonly<UsersPageProps>) {
   const usersWithSavingsCount = await countUsers('users-with-savings')
   return (
     <>
-      <h2 className={'dashboardTitle'}>Users</h2>
+      <h1 className={'dashboardTitle'}>Users</h1>
       <section>
         <div className={styles.statsWrapper}>
           <UserStatContainer

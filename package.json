@@ -15,7 +15,8 @@
     "lendsqr-fe-test": "file:",
     "next": "15.0.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "zustand": "^5.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.2",
