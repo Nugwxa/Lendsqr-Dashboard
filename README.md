@@ -41,3 +41,7 @@ To run the project locally, follow these steps:
    ```bash
    npm run test
    ```
+
+## Project Documentation
+ [Project Report](https://docs.google.com/document/d/1eA801Mf8W1oPn6fLam2MZhr6aAYbQifnXG8olbkjUL4/edit?usp=sharing)
+
