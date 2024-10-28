@@ -1,0 +1,48 @@
+@use '../../../../../styles/colors' as *;
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+
+  &Title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $blue-2;
+  }
+
+  &Content {
+    display: grid;
+    gap: 40px;
+    row-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    border-bottom: 1px solid opacity($blue-2, 0.1);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    &.fourLayout {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    @media (max-width: 500px) {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
+  }
+
+  &:last-of-type {
+    .sectionContent:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+}
