@@ -1,3 +1,4 @@
+export { default as ArrowLeftLongIcon } from './ArrowLeftLongIcon'
 export { default as BellIcon } from './BellIcon'
 export { default as CalenderIcon } from './CalenderIcon'
 export { default as ChevronLeftIcon } from './ChevronLeftIcon'
