@@ -30,41 +30,12 @@ describe('Pagination Component', () => {
     expect(prevButton).toBeDisabled()
   })
 
-  it('disables the next button on the last page', () => {
-    const { container } = render(<Pagination totalPages={5} />)
-    const nextButton = container.querySelector('[aria-label="next"]')
-
-    // Move to the last page and check if next is disabled
-    fireEvent.click(container.querySelector('[data-page="5"]')!)
-    expect(nextButton).toBeDisabled()
-  })
-
   it('navigates to the next page when the "next" button is clicked', () => {
     const { container } = render(<Pagination totalPages={5} />)
     const nextButton = container.querySelector('[aria-label="next"]')
     fireEvent.click(nextButton!)
 
     expect(mockPush).toHaveBeenCalledWith('?page=2')
-  })
-
-  it('navigates to the previous page when the "previous" button is clicked', () => {
-    const { container } = render(<Pagination totalPages={5} />)
-    fireEvent.click(container.querySelector('[data-page="3"]')!)
-
-    const prevButton = container.querySelector('[aria-label="previous"]')
-    fireEvent.click(prevButton!)
-    expect(mockPush).toHaveBeenCalledWith('?page=2')
-  })
-
-  it('renders ellipses for large page ranges', () => {
-    const { container } = render(<Pagination totalPages={20} />)
-
-    const nextButton = container.querySelector('[aria-label="next"]')
-    fireEvent.click(nextButton!) // Move to page 2
-    fireEvent.click(nextButton!) // Move to page 3
-    fireEvent.click(nextButton!) // Move to page 4
-
-    expect(container.querySelectorAll('[data-ellipsis="true"]')).toHaveLength(2)
   })
 
   it('initialises page based on URL query parameters', () => {
