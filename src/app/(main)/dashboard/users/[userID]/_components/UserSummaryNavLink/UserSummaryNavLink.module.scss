@@ -1,0 +1,13 @@
+@use '../../../../../../../styles/colors' as *;
+
+.button {
+  padding: 5px 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.active {
+  color: $teal-1;
+  border-radius: 0px;
+  border-bottom: 1px solid $teal-1;
+}
