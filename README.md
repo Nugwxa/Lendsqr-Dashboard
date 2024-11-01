@@ -18,8 +18,8 @@ To run the project locally, follow these steps:
 1. Clone the repo:
 
    ```bash
-   git clone https://github.com/nugwxa/lendsqr-fe-test.git
-   cd lendsqr-fe-test
+   git clone https://github.com/nugwxa/lendsqr-dashboard.git
+   cd lendsqr-dashboard
    ```
 
 2. Install dependencies:
